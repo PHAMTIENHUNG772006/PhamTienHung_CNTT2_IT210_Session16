@@ -7,9 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.awt.print.Pageable;
 
-public interface TransactionHistory extends JpaRepository<TransactionHistory,Long> {
-    Page<TransactionHistory> findByWalletId(Pageable pageable, Long id);
+public interface TransactionRepository extends JpaRepository<TransactionRepository,Long> {
+    Page<TransactionRepository> findByWalletId(Pageable pageable, Long id);
 
     @Query("select t from  TransactionHistory t where t.amount > :minAmount")
-    Page<TransactionHistory> findLargeTransactions(Pageable pageable, Double minAmount);
+    Page<TransactionRepository> findLargeTransactions(Pageable pageable, Double minAmount);
 }

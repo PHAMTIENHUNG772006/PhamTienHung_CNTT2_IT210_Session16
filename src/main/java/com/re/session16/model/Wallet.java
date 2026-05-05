@@ -1,6 +1,6 @@
 package com.re.session16.model;
 
-import com.re.session16.repository.TransactionHistory;
+import com.re.session16.repository.TransactionRepository;
 import jakarta.persistence.*;
 import lombok.*;
 
