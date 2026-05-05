@@ -22,6 +22,6 @@ public class Wallet {
 
     private double balance;
 
-    @OneToOne(mappedBy = "wallet",cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "wallet",cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     private List<TransactionHistory> transactionHistory;
 }
